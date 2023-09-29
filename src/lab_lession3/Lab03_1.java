@@ -18,8 +18,8 @@ public class Lab03_1 {
                 oddNumber++;
             }
         }
-        System.out.printf("Even Number %d\n",evenNumber);
-        System.out.printf("Odd Number %d",oddNumber);
+        System.out.printf("Even Number %d\n", evenNumber);
+        System.out.printf("Odd Number %d", oddNumber);
 
     }
 }
