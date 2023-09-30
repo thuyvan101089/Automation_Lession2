@@ -10,7 +10,7 @@ public class Lab02_1 {
         Normal weight = 18.5 – 24.9
         Overweight = 25–29.9
         Obesity = BMI of 30 or greater
-        BMI = weight / (height x 2)
+        BMI = weight / (height x height)
 
     */
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class Lab02_1 {
         float inputUserHeight = scanner.nextFloat();
 
         if (inputUserWeight > 0 && inputUserHeight > 0) {
-            float bmiIndex = inputUserWeight / (inputUserHeight * 2);
+            float bmiIndex = inputUserWeight / (inputUserHeight * inputUserHeight);
 
             if (bmiIndex < 18.5) {
                 System.out.println("You are underweight < 18.5");

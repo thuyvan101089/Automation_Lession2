@@ -11,7 +11,7 @@ public class Lab02_3 {
         Normal weight = 18.5 – 24.9
         Overweight = 25–29.9
         Obesity = BMI of 30 or greater
-        BMI = weight / (height x 2)
+        BMI = weight / (height x height)
      */
 
         Scanner scanner = new Scanner(System.in);
@@ -22,26 +22,31 @@ public class Lab02_3 {
         float inputUserHeight = scanner.nextFloat();
 
         if (inputUserWeight > 0 && inputUserHeight > 0) {
-            float bmiIndex = inputUserWeight / (inputUserHeight * 2);
-            float minNormalWeight = 18.5f;
-            float maxNormalWeight = 24.9f;
-            float adjustIndex;
+            float bmiIndex = inputUserWeight / (inputUserHeight * inputUserHeight);
+            float minNormalIndex = 18.5f;
+            float maxNormalIndex = 24.9f;
+            float adjustWeight;
+            float expectedWeight;
+
             if (bmiIndex < 18.5) {
-                adjustIndex = minNormalWeight - bmiIndex;
+                expectedWeight = minNormalIndex * (inputUserHeight*inputUserHeight);
+                adjustWeight = expectedWeight - inputUserWeight;
                 System.out.println("You are underweight < 18.5");
-                System.out.printf("You should increase %f kg",adjustIndex);
+                System.out.printf("You should increase %f kg",adjustWeight);
 
             } else if (bmiIndex <= 24.9) {
                 System.out.println("You are normal weight: 18.5 – 24.9");
 
             } else if (bmiIndex <= 29.9) {
-                adjustIndex = bmiIndex - maxNormalWeight;
+                expectedWeight = maxNormalIndex * (inputUserHeight*inputUserHeight);
+                adjustWeight =  inputUserHeight - expectedWeight;
                 System.out.println("You are overweight: 25–29.9");
-                System.out.printf("You should decrease %f kg",adjustIndex);
+                System.out.printf("You should decrease %f kg",adjustWeight);
             } else {
-                adjustIndex = bmiIndex - maxNormalWeight;
+                expectedWeight = maxNormalIndex * (inputUserHeight*inputUserHeight);
+                adjustWeight =  inputUserHeight - expectedWeight;
                 System.out.println("You are obesity = BMI of 30 or greater");
-                System.out.printf("You should decrease %f kg",adjustIndex);
+                System.out.printf("You should decrease %f kg",adjustWeight);
             }
 
         } else {
