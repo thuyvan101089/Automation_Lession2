@@ -9,7 +9,7 @@ public class FunctionWithParameter {
         int[] array1 = {1, 12, 16, 28, 34};
         int[] array2 = {1, 13, 16, 27, 99};
 
-        //argument: gia tri that cungc ap cho function
+        //argument: gia tri that cung cap cho function
         int []mergedArray = merged2SortedArray(array1,array2);
         System.out.println(Arrays.toString(mergedArray));
 }
