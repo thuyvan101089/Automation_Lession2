@@ -1,7 +1,8 @@
-package lession7;
+package lab_lession7;
 
 public class Employee {
     private String name;
+
     private int salary;
 
     public Employee() {
@@ -27,13 +28,4 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
-
 }

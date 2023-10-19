@@ -1,0 +1,9 @@
+- Internal Login Page:
++ username
++ password
++ login button
+- External Login Page
++ username_ext
++ password_ext
++ login button_ext
+Require: Design necessary classes to test login page

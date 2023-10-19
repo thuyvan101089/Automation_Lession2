@@ -15,7 +15,7 @@ public class Lab06_4 {
             System.out.println("URL contains http");
         }
 
-        String domainName = url.substring(url.indexOf("//") + 2, url.indexOf(".com"));
+        String domainName = url.substring(url.indexOf("//") + 2);
         System.out.println(domainName);
 
         if (url.contains(".com")) {
