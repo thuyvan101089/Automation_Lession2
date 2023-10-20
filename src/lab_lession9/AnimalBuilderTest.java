@@ -22,7 +22,6 @@ public class AnimalBuilderTest {
                 .setWithWings(false)
                 .build();
 
-
         AnimalWithBuilder tiger = builder
                 .setName("Strong Tiger")
                 .setSpeed(new SecureRandom().nextInt(MAXSPEED_TIGER))

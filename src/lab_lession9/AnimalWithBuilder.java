@@ -9,7 +9,6 @@ public class AnimalWithBuilder {
         this.name = build.name;
         this.speed = build.speed;
         this.withWings = build.withWings;
-
     }
 
     public String getName() {
